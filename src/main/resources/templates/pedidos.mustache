@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <title> Limpito - Pedidos </title>
+    <link rel="stylesheet" href="../../css/style.css">
+  </head>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    } 
+    th{
+      font-size:48;
+    }
+    td{
+      font-size:36;
+    }
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+ 
+  </style>
+  <body>
+    <div class="container">
+      <p><a href="">Pedidos</a></p>
+    </div>
+    <div class="center">
+      <table>
+        <tr style="background:#179b77;">
+          <th>id</th>
+          <th>name</th>
+          <th>assignee</th>
+          <th>createTime</th>
+          <th>suspended</th>
+        </tr>
+        {{#pedidos}}
+          <tr>
+            <td><b>{{id}}</b></td>
+            <td>{{name}}</td>
+            <td>{{assignee}}</td>
+            <td>{{createTime}}</td>
+            <td>{{suspended}}</td>
+          </tr>
+        {{/pedidos}}
+      </table>
+    </div>
+  </body>
+</html>
